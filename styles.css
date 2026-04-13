@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
@@ -7,7 +11,7 @@ body {
   line-height: 1.5;
 }
 
-/* ===== ENCABEZADO (ANCHO COMPLETO, CENTRADO) ===== */
+/* ===== ENCABEZADO ===== */
 .header-full {
   background: #0d1225;
   border-bottom: 2px solid #2a3a5c;
@@ -137,15 +141,25 @@ body {
   gap: 20px;
 }
 
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .legend-dot {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  margin-right: 5px;
 }
 
-.legend-dot.sold { background: #c0392b; }
-.legend-dot.available { background: #2ecc71; }
+.legend-dot.sold {
+  background: #c0392b;
+}
+
+.legend-dot.available {
+  background: #2ecc71;
+}
 
 /* DOS COLUMNAS */
 .two-column-layout {
@@ -195,6 +209,10 @@ body {
   width: 200px;
 }
 
+.search-wrapper input::placeholder {
+  color: #9bb5d4;
+}
+
 .search-clear {
   background: none;
   border: none;
@@ -202,6 +220,10 @@ body {
   font-size: 1.3rem;
   padding: 0 15px;
   cursor: pointer;
+}
+
+.search-clear:hover {
+  color: white;
 }
 
 .grid-scroll {
@@ -233,7 +255,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 4px 0 #0f1a24, 0 5px 8px black;
-  border: 1.5px solid #ffffff30;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   color: white;
   text-shadow: 1px 1px 0 #000;
 }
@@ -241,15 +263,17 @@ body {
 .number-circle.available {
   background: linear-gradient(145deg, #2ecc71, #1f8f4b);
 }
+
 .number-circle.available:hover {
   transform: scale(1.08);
   background: #3fe081;
 }
+
 .number-circle.sold {
   background: linear-gradient(145deg, #c0392b, #962d22);
   cursor: default;
   opacity: 0.85;
-  text-decoration: line-through 2px #ffffff40;
+  text-decoration: line-through 2px rgba(255, 255, 255, 0.3);
 }
 
 /* PANEL DE PREMIO */
@@ -369,6 +393,7 @@ body {
   z-index: 1000;
   transition: 0.15s;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
   background: #2ecc71;
@@ -386,14 +411,35 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .two-column-layout { flex-direction: column; }
-  .terms-grid { grid-template-columns: 1fr; gap: 0; }
-  .prize-card { position: static; }
+  .two-column-layout {
+    flex-direction: column;
+  }
+  .terms-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .prize-card {
+    position: static;
+  }
 }
 
 @media (max-width: 600px) {
-  .main-title { font-size: 2.2rem; }
-  .info-bar { flex-direction: column; text-align: center; }
-  .numbers-grid { gap: 5px; }
-  .number-circle { font-size: 0.8rem; }
+  .main-title {
+    font-size: 2.2rem;
+  }
+  .info-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .numbers-grid {
+    gap: 5px;
+  }
+  .number-circle {
+    font-size: 0.8rem;
+  }
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+  }
 }
