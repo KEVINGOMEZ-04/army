@@ -1,0 +1,395 @@
+/* ===== RESET Y BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: #0b0f1c;
+  color: #f0f3fa;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== ENCABEZADO ===== */
+.header {
+  background: #0d1424;
+  border-bottom: 2px solid #2e3a5c;
+  padding: 0.9rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c0e0ff;
+  text-shadow: 0 0 8px rgba(80, 160, 255, 0.4);
+}
+
+.social-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #1e2b47;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: transform 0.2s, background 0.2s;
+  border: 1px solid #3e5775;
+}
+
+.social-icon:hover {
+  background: #2e4a6a;
+  transform: scale(1.1);
+}
+
+.icon-placeholder {
+  display: block;
+  line-height: 1;
+}
+
+/* ===== MAIN LAYOUT: 2 COLUMNAS ===== */
+.main.two-columns {
+  display: flex;
+  max-width: 1600px;
+  margin: 20px auto;
+  padding: 0 20px;
+  gap: 25px;
+  flex: 1;
+  width: 100%;
+}
+
+.left-panel {
+  flex: 1.2; /* un poco más ancho que la derecha */
+  min-width: 0; /* evitar desbordamiento */
+}
+
+.right-panel {
+  flex: 0.9;
+  min-width: 320px;
+  background: #0e1625;
+  border-radius: 24px;
+  border: 1px solid #2c405e;
+  box-shadow: 0 10px 25px #00000060;
+  padding: 20px 15px;
+  height: fit-content;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* ===== HERO COMPACTO (IZQUIERDA) ===== */
+.hero-compact {
+  background: linear-gradient(145deg, #101a2b, #0a101e);
+  border-radius: 30px;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #2c405e;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffd966;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.hero-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b7e4c7;
+  margin-bottom: 15px;
+}
+
+.btn-buy {
+  background: #2ecc71;
+  border: none;
+  color: #0a1a1c;
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 12px 30px;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #1b7943, 0 6px 15px rgba(46, 204, 113, 0.3);
+  transition: all 0.1s;
+  border: 1px solid #6fda9f;
+}
+
+.btn-buy:hover {
+  background: #3ee082;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #1b7943, 0 10px 20px #2ecc7180;
+}
+
+/* Contador */
+.counter-card {
+  background: #111b2b;
+  padding: 12px 20px;
+  border-radius: 40px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border: 1px solid #3f5a7a;
+}
+
+.counter-label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.counter-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: #1f2e44;
+  padding: 4px 20px;
+  border-radius: 40px;
+  color: #ffde9e;
+}
+
+/* Leyenda inline */
+.inline-legend {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-circle.small {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  box-shadow: 0 3px 0 #1a1a2e;
+}
+
+.legend-circle--sold {
+  background: #c0392b;
+}
+
+.legend-circle--available {
+  background: #2ecc71;
+}
+
+/* Buscador */
+.search-box {
+  display: flex;
+  margin: 15px 0 15px;
+  background: #0f1a28;
+  border-radius: 50px;
+  border: 1px solid #3e5a7a;
+  padding: 2px;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  color: white;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #9bb5d4;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #c0d4f0;
+  font-size: 1.3rem;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.clear-btn:hover {
+  color: white;
+}
+
+/* Grid wrapper con scroll si es necesario */
+.grid-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
+  border-radius: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  background: #0b1320;
+  padding: 15px 10px;
+  border-radius: 20px;
+  border: 1px solid #2d4563;
+}
+
+.numero-circle {
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 55px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #0f1a24, 0 5px 8px black;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: white;
+  text-shadow: 1px 1px 0 #00000090;
+  transition: transform 0.1s;
+}
+
+.numero-circle.available {
+  background: linear-gradient(145deg, #2ecc71, #1f8f4b);
+}
+
+.numero-circle.available:hover {
+  transform: scale(1.05);
+  background: #3fe081;
+}
+
+.numero-circle.sold {
+  background: linear-gradient(145deg, #c0392b, #962d22);
+  cursor: default;
+  opacity: 0.85;
+  text-decoration: line-through 2px rgba(255,255,255,0.2);
+}
+
+/* ===== PANEL DERECHO: TÉRMINOS ===== */
+.terms-container {
+  color: #e0ecff;
+}
+
+.terms-title {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3e5775;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  color: #ffd966;
+}
+
+.terms-content {
+  font-size: 0.95rem;
+}
+
+.terms-content h3 {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: #bdd3ff;
+  font-size: 1.2rem;
+}
+
+.terms-content p {
+  margin-bottom: 10px;
+}
+
+.terms-content ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.terms-content li {
+  margin-bottom: 4px;
+}
+
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 0 #1b7943, 0 10px 25px black;
+  transition: all 0.15s;
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  border: 2px solid #a3e0b0;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  background: #2ecc71;
+}
+
+.wa-icon {
+  line-height: 1;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a101a;
+  border-top: 1px solid #253c58;
+  color: #9bb5d4;
+  margin-top: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .main.two-columns {
+    flex-direction: column;
+  }
+  .right-panel {
+    max-height: none;
+  }
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+  }
+  .numero-circle {
+    font-size: 0.75rem;
+  }
+}
