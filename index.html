@@ -4,20 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Rifa BTS VIP · Números 001–999</title>
-  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome para íconos de redes sociales y WhatsApp (uso local, sin llamadas externas) -->
-  <!-- Usaremos una versión local simple con emojis o SVG. Para simplicidad usaré emojis, pero puedes reemplazar con imágenes. -->
 </head>
 <body>
   <!-- ===== ENCABEZADO ===== -->
   <header class="header">
     <div class="header-container">
+      <!-- Título centrado (se fuerza con flex) -->
       <h1 class="logo">🎫 Rifa BTS VIP</h1>
       <nav class="social-nav">
-        <!-- Íconos de redes sociales (espacio para logos) -->
         <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <span class="icon-placeholder">🎵</span> <!-- Reemplazar con imagen/logo -->
+          <span class="icon-placeholder">🎵</span>
         </a>
         <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <span class="icon-placeholder">📘</span>
@@ -47,7 +44,7 @@
         <span class="counter-value" id="contadorVendidos">0 / 999</span>
       </div>
 
-      <!-- Leyenda visual (círculos pequeños) -->
+      <!-- Leyenda visual -->
       <div class="legend inline-legend">
         <div class="legend-item">
           <div class="legend-circle legend-circle--sold small">001</div>
@@ -59,68 +56,85 @@
         </div>
       </div>
 
-      <!-- Buscador de números -->
+      <!-- Buscador -->
       <div class="search-box">
         <input type="text" id="searchInput" placeholder="🔍 Buscar número (ej: 005, 123)" maxlength="3">
         <button id="clearSearch" class="clear-btn">✖</button>
       </div>
 
-      <!-- Grid de números (scrollable si es necesario) -->
+      <!-- Grid de números con scroll -->
       <div class="grid-wrapper">
         <div class="grid-container" id="numerosGrid"></div>
       </div>
     </section>
 
-    <!-- COLUMNA DERECHA: Términos y Condiciones -->
+    <!-- COLUMNA DERECHA: Detalles del premio / VIP -->
     <section class="right-panel">
-      <div class="terms-container">
-        <h2 class="terms-title">📜 TÉRMINOS Y CONDICIONES</h2>
-        <div class="terms-content">
-          <!-- Los términos se incluyen directamente, estructurados con HTML -->
-          <h3>1. ORGANIZADOR</h3>
-          <p>La presente rifa es organizada por una persona natural responsable, quien garantiza la transparencia del proceso, la veracidad del premio y la correcta entrega al ganador.</p>
-
-          <h3>2. DESCRIPCIÓN DEL PREMIO</h3>
-          <p>El premio consiste en:</p>
-          <ul>
-            <li>🎟️ 1 Entrada VIP para concierto de BTS (sábado 3 de octubre)</li>
-            <li>💣 Army Bomb</li>
-            <li>👕 Artículo(s) de merchandising BTS (camiseta u otros)</li>
-          </ul>
-          <p><strong>IMPORTANTE:</strong> El premio es único y no es canjeable por dinero en efectivo ni por otros productos.</p>
-
-          <h3>3. MECÁNICA DE PARTICIPACIÓN</h3>
-          <p>Se disponen <strong>999 números</strong> (del 001 al 999). Cada número tiene un valor de <strong>$15.000 COP</strong>. La asignación del número se realiza únicamente una vez confirmado el pago. No se reservan números sin pago previo.</p>
-
-          <h3>4. MÉTODO DE PAGO</h3>
-          <p>El participante deberá realizar el pago a través de los medios indicados por el organizador (Nequi, Nu, Daviplata u otro). Es obligatorio enviar comprobante de pago para validar la participación.</p>
-
-          <h3>5. SORTEO</h3>
-          <p>El sorteo se realizará en el mes de <strong>septiembre de 2026</strong>. En caso de venderse todos los números antes de la fecha prevista, el sorteo se realizará de manera anticipada. El número ganador será definido con base en los resultados de la <strong>Lotería de Medellín</strong> (o la que se indique oficialmente).</p>
-
-          <h3>6. ENTREGA DEL PREMIO</h3>
-          <p>El ganador será contactado mediante los datos proporcionados al momento de la compra. La entrega del premio será coordinada de forma segura (presencial o envío). La entrada VIP será transferida oficialmente cuando la plataforma lo permita (aproximadamente 1 mes antes del evento).</p>
-
-          <h3>7. TRANSPARENCIA</h3>
-          <p>El organizador publicará constantemente el estado de los números (vendidos/disponibles). Se realizarán <strong>transmisiones en vivo a través de la plataforma TikTok</strong>, donde se mostrará: el avance de la rifa, la cantidad de números vendidos y la veracidad del proceso. Estas transmisiones buscan garantizar confianza y transparencia a todos los participantes. El número ganador corresponderá estrictamente al resultado oficial de la lotería definida para el sorteo.</p>
-
-          <h3>8. CONDICIÓN EN CASO DE NO COMPLETAR LOS CUPOS</h3>
-          <p>En caso de no vender la cantidad mínima de números necesaria para realizar el sorteo, se procederá a la devolución del <strong>90% del valor pagado</strong> a cada participante. El 10% restante corresponde a gastos operativos, administrativos y de gestión de la rifa. La devolución se realizará por el mismo medio de pago utilizado por el participante.</p>
-
-          <h3>9. RESPONSABILIDAD DEL PARTICIPANTE</h3>
-          <p>Verificar que el número asignado sea correcto. Proporcionar datos de contacto válidos. Conservar comprobante de pago.</p>
-
-          <h3>10. ACEPTACIÓN</h3>
-          <p>La participación en esta rifa implica la aceptación total de los presentes términos y condiciones.</p>
-
-          <h3>11. CONSIDERACIONES FINALES</h3>
-          <p>Esta actividad es de carácter promocional y voluntaria. El organizador se compromete a actuar de buena fe y cumplir con lo ofrecido. Cualquier situación no contemplada será resuelta de manera justa y transparente.</p>
+      <div class="premio-card">
+        <h2 class="premio-title">🎁 PREMIO VIP</h2>
+        <div class="premio-content">
+          <p><strong>🎟️ 1 Entrada VIP</strong> para concierto de BTS<br>📅 Sábado 3 de Octubre</p>
+          <p><strong>💣 Army Bomb</strong> oficial</p>
+          <p><strong>👕 Merchandising exclusivo</strong> (camiseta u otros)</p>
+          <div class="premio-nota">
+            <p>⭐ <strong>Valor del número:</strong> $15.000 COP</p>
+            <p>🔒 <strong>Transferencia de entrada:</strong> Por políticas de Ticketmaster, la entrada VIP solo podrá ser transferida oficialmente aproximadamente <strong>1 mes antes del evento</strong>. El ganador será notificado oportunamente.</p>
+          </div>
+          <p class="premio-garantia">✅ Pago seguro · Sorteo transparente</p>
         </div>
       </div>
+      <!-- Puedes agregar más detalles si quieres -->
     </section>
   </main>
 
-  <!-- ===== BOTÓN FLOTANTE DE WHATSAPP ===== -->
+  <!-- ===== SECCIÓN TÉRMINOS Y CONDICIONES (ancho completo) ===== -->
+  <section class="terms-section">
+    <div class="terms-container">
+      <h2 class="terms-title">📜 TÉRMINOS Y CONDICIONES – RIFA BTS VIP</h2>
+      <div class="terms-content">
+        <h3>1. ORGANIZADOR</h3>
+        <p>La presente rifa es organizada por una persona natural responsable, quien garantiza la transparencia del proceso, la veracidad del premio y la correcta entrega al ganador.</p>
+
+        <h3>2. DESCRIPCIÓN DEL PREMIO</h3>
+        <p>El premio consiste en:</p>
+        <ul>
+          <li>🎟️ 1 Entrada VIP para concierto de BTS (sábado 3 de octubre)</li>
+          <li>💣 Army Bomb</li>
+          <li>👕 Artículo(s) de merchandising BTS (camiseta u otros)</li>
+        </ul>
+        <p><strong>IMPORTANTE:</strong> El premio es único y no es canjeable por dinero en efectivo ni por otros productos.</p>
+
+        <h3>3. MECÁNICA DE PARTICIPACIÓN</h3>
+        <p>Se disponen <strong>999 números</strong> (del 001 al 999). Cada número tiene un valor de <strong>$15.000 COP</strong>. La asignación del número se realiza únicamente una vez confirmado el pago. No se reservan números sin pago previo.</p>
+
+        <h3>4. MÉTODO DE PAGO</h3>
+        <p>El participante deberá realizar el pago a través de los medios indicados por el organizador (Nequi, Nu, Daviplata u otro). Es obligatorio enviar comprobante de pago para validar la participación.</p>
+
+        <h3>5. SORTEO</h3>
+        <p>El sorteo se realizará en el mes de <strong>septiembre de 2026</strong>. En caso de venderse todos los números antes de la fecha prevista, el sorteo se realizará de manera anticipada. El número ganador será definido con base en los resultados de la <strong>Lotería de Medellín</strong> (o la que se indique oficialmente).</p>
+
+        <h3>6. ENTREGA DEL PREMIO</h3>
+        <p>El ganador será contactado mediante los datos proporcionados al momento de la compra. La entrega del premio será coordinada de forma segura (presencial o envío). La entrada VIP será transferida oficialmente cuando la plataforma lo permita (aproximadamente 1 mes antes del evento).</p>
+
+        <h3>7. TRANSPARENCIA</h3>
+        <p>El organizador publicará constantemente el estado de los números (vendidos/disponibles). Se realizarán <strong>transmisiones en vivo a través de TikTok</strong>, mostrando el avance de la rifa y la cantidad de números vendidos. El número ganador corresponderá estrictamente al resultado oficial de la lotería definida.</p>
+
+        <h3>8. CONDICIÓN EN CASO DE NO COMPLETAR LOS CUPOS</h3>
+        <p>En caso de no vender la cantidad mínima de números necesaria, se procederá a la devolución del <strong>90% del valor pagado</strong> a cada participante. El 10% restante corresponde a gastos operativos y administrativos.</p>
+
+        <h3>9. RESPONSABILIDAD DEL PARTICIPANTE</h3>
+        <p>Verificar que el número asignado sea correcto, proporcionar datos de contacto válidos y conservar comprobante de pago.</p>
+
+        <h3>10. ACEPTACIÓN</h3>
+        <p>La participación en esta rifa implica la aceptación total de los presentes términos y condiciones.</p>
+
+        <h3>11. CONSIDERACIONES FINALES</h3>
+        <p>Esta actividad es de carácter promocional y voluntaria. El organizador se compromete a actuar de buena fe y cumplir con lo ofrecido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
   <a href="#" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <span class="wa-icon">💬</span>
   </a>
@@ -130,15 +144,14 @@
     <p>© 2026 · Rifa BTS VIP · Todos los derechos reservados</p>
   </footer>
 
-  <!-- ===== DATOS DE LA RIFA ===== -->
+  <!-- Datos de números -->
   <script src="numbers.js"></script>
 
-  <!-- ===== LÓGICA DE INTERACCIÓN ===== -->
+  <!-- Lógica de interacción -->
   <script>
     (function() {
       'use strict';
 
-      // Referencias DOM
       const gridContainer = document.getElementById('numerosGrid');
       const contadorSpan = document.getElementById('contadorVendidos');
       const btnComprar = document.getElementById('btnComprarGeneral');
@@ -146,7 +159,6 @@
       const clearBtn = document.getElementById('clearSearch');
       const whatsappFloat = document.getElementById('whatsappFloat');
 
-      // Verificar datos
       if (!window.numbers || !Array.isArray(window.numbers)) {
         gridContainer.innerHTML = '<p style="color:red;">Error al cargar números.</p>';
         return;
@@ -154,19 +166,16 @@
 
       const listaNumeros = window.numbers;
 
-      // Función contador
       function actualizarContador() {
         const vendidos = listaNumeros.filter(n => n.vendido).length;
         contadorSpan.textContent = `${vendidos} / 999`;
       }
 
-      // Abrir WhatsApp con mensaje
       function abrirWhatsApp(mensaje) {
         const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank', 'noopener,noreferrer');
       }
 
-      // Manejador clic en número
       function manejarClickNumero(e) {
         const circle = e.currentTarget;
         const numero = circle.getAttribute('data-numero');
@@ -176,17 +185,12 @@
         }
       }
 
-      // Renderizar grid con filtro opcional
-      let elementosCirculo = []; // guardar referencia para búsqueda
-
       function renderizarGrid(filtro = '') {
         gridContainer.innerHTML = '';
         const fragment = document.createDocumentFragment();
         
         listaNumeros.forEach(item => {
           const { numero, vendido } = item;
-          
-          // Aplicar filtro
           if (filtro && !numero.includes(filtro)) return;
 
           const circle = document.createElement('div');
@@ -197,21 +201,16 @@
           circle.addEventListener('click', manejarClickNumero);
           
           fragment.appendChild(circle);
-          elementosCirculo.push(circle);
         });
 
         gridContainer.appendChild(fragment);
         actualizarContador();
       }
 
-      // Inicializar grid completo
       renderizarGrid();
 
-      // Evento de búsqueda
       searchInput.addEventListener('input', (e) => {
-        const valor = e.target.value.trim();
-        // Ocultar/mostrar según filtro (re-renderizado rápido)
-        renderizarGrid(valor);
+        renderizarGrid(e.target.value.trim());
       });
 
       clearBtn.addEventListener('click', () => {
@@ -219,19 +218,14 @@
         renderizarGrid('');
       });
 
-      // Botón Comprar general
       btnComprar.addEventListener('click', () => {
         abrirWhatsApp('Hola, quiero comprar un número para la Rifa BTS VIP.');
       });
 
-      // Configurar botón flotante WhatsApp (mensaje genérico de contacto)
       whatsappFloat.addEventListener('click', (e) => {
         e.preventDefault();
         abrirWhatsApp('Hola, tengo una consulta sobre la Rifa BTS VIP.');
       });
-
-      // También podríamos enlazar los íconos sociales (placeholder)
-      // No hay URLs reales, pero se pueden editar en el HTML.
     })();
   </script>
 </body>
