@@ -34,10 +34,21 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #c0e0ff;
-  text-shadow: 0 0 8px rgba(80, 160, 255, 0.4);
+  color: #ffd966;
+  text-shadow: 0 0 10px #ffb34780;
+  margin: 0 auto 0 0; /* alineado a la izquierda en desktop, pero centrado? mejor centrarlo con flex */
+  flex: 1;
+  text-align: center;
+}
+
+/* Para que el logo quede centrado incluso con los íconos a la derecha */
+.header-container {
+  position: relative;
+}
+.social-nav {
+  margin-left: auto;
 }
 
 .social-nav {
@@ -65,12 +76,7 @@ body {
   transform: scale(1.1);
 }
 
-.icon-placeholder {
-  display: block;
-  line-height: 1;
-}
-
-/* ===== MAIN LAYOUT: 2 COLUMNAS ===== */
+/* ===== MAIN 2 COLUMNAS ===== */
 .main.two-columns {
   display: flex;
   max-width: 1600px;
@@ -82,24 +88,16 @@ body {
 }
 
 .left-panel {
-  flex: 1.2; /* un poco más ancho que la derecha */
-  min-width: 0; /* evitar desbordamiento */
+  flex: 1.4;
+  min-width: 0;
 }
 
 .right-panel {
   flex: 0.9;
-  min-width: 320px;
-  background: #0e1625;
-  border-radius: 24px;
-  border: 1px solid #2c405e;
-  box-shadow: 0 10px 25px #00000060;
-  padding: 20px 15px;
-  height: fit-content;
-  max-height: 85vh;
-  overflow-y: auto;
+  min-width: 280px;
 }
 
-/* ===== HERO COMPACTO (IZQUIERDA) ===== */
+/* ===== HERO COMPACTO ===== */
 .hero-compact {
   background: linear-gradient(145deg, #101a2b, #0a101e);
   border-radius: 30px;
@@ -189,6 +187,11 @@ body {
   height: 40px;
   font-size: 1rem;
   box-shadow: 0 3px 0 #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 .legend-circle--sold {
@@ -230,16 +233,11 @@ body {
   font-size: 1.3rem;
   padding: 0 15px;
   cursor: pointer;
-  transition: color 0.2s;
 }
 
-.clear-btn:hover {
-  color: white;
-}
-
-/* Grid wrapper con scroll si es necesario */
+/* Grid wrapper */
 .grid-wrapper {
-  max-height: 500px;
+  max-height: 480px;
   overflow-y: auto;
   padding-right: 5px;
   border-radius: 20px;
@@ -271,18 +269,15 @@ body {
   border: 1.5px solid rgba(255,255,255,0.15);
   color: white;
   text-shadow: 1px 1px 0 #00000090;
-  transition: transform 0.1s;
 }
 
 .numero-circle.available {
   background: linear-gradient(145deg, #2ecc71, #1f8f4b);
 }
-
 .numero-circle.available:hover {
   transform: scale(1.05);
   background: #3fe081;
 }
-
 .numero-circle.sold {
   background: linear-gradient(145deg, #c0392b, #962d22);
   cursor: default;
@@ -290,44 +285,90 @@ body {
   text-decoration: line-through 2px rgba(255,255,255,0.2);
 }
 
-/* ===== PANEL DERECHO: TÉRMINOS ===== */
-.terms-container {
-  color: #e0ecff;
+/* ===== PANEL DERECHO: PREMIO ===== */
+.premio-card {
+  background: #0e1625;
+  border-radius: 24px;
+  border: 1px solid #2c405e;
+  padding: 25px 20px;
+  box-shadow: 0 10px 25px #00000060;
 }
 
-.terms-title {
-  font-size: 1.8rem;
+.premio-title {
+  font-size: 1.9rem;
+  color: #ffd966;
   border-bottom: 2px solid #3e5775;
   padding-bottom: 12px;
   margin-bottom: 20px;
+}
+
+.premio-content p {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.premio-nota {
+  background: #1a2538;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 5px solid #f1c40f;
+}
+
+.premio-garantia {
+  color: #a3e0b0;
+  font-weight: 600;
+}
+
+/* ===== TÉRMINOS Y CONDICIONES (ancho completo) ===== */
+.terms-section {
+  max-width: 1600px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.terms-container {
+  background: #0e1625;
+  border-radius: 30px;
+  border: 1px solid #2c405e;
+  padding: 30px 30px;
+  box-shadow: 0 10px 25px #00000060;
+}
+
+.terms-title {
+  font-size: 2rem;
   color: #ffd966;
+  border-bottom: 2px solid #3e5775;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .terms-content {
-  font-size: 0.95rem;
+  color: #e0ecff;
+  column-count: 2;
+  column-gap: 40px;
 }
 
 .terms-content h3 {
-  margin-top: 18px;
-  margin-bottom: 6px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   color: #bdd3ff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  break-after: avoid;
 }
 
-.terms-content p {
-  margin-bottom: 10px;
+.terms-content p, .terms-content ul {
+  margin-bottom: 15px;
+  break-inside: avoid;
 }
 
 .terms-content ul {
-  margin-left: 20px;
-  margin-bottom: 10px;
+  padding-left: 25px;
 }
 
-.terms-content li {
-  margin-bottom: 4px;
-}
-
-/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+/* ===== WHATSAPP FLOTANTE ===== */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -347,14 +388,9 @@ body {
   border: 2px solid #a3e0b0;
   z-index: 1000;
 }
-
 .whatsapp-float:hover {
   transform: scale(1.08);
   background: #2ecc71;
-}
-
-.wa-icon {
-  line-height: 1;
 }
 
 /* ===== FOOTER ===== */
@@ -364,16 +400,35 @@ body {
   background: #0a101a;
   border-top: 1px solid #253c58;
   color: #9bb5d4;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .terms-content {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 850px) {
   .main.two-columns {
     flex-direction: column;
   }
-  .right-panel {
-    max-height: none;
+  .logo {
+    text-align: center;
+    flex: auto;
+  }
+  .header-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    gap: 4px;
+  }
+  .numero-circle {
+    font-size: 0.75rem;
   }
   .whatsapp-float {
     width: 55px;
@@ -381,15 +436,5 @@ body {
     font-size: 2rem;
     bottom: 20px;
     right: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: repeat(10, 1fr);
-    gap: 4px;
-  }
-  .numero-circle {
-    font-size: 0.75rem;
   }
 }
