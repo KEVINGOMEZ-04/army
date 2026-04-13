@@ -7,236 +7,177 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ===== ENCABEZADO CENTRADO ===== -->
-  <header class="header">
-    <div class="header-content">
-      <h1 class="logo">🎫 Rifa BTS VIP</h1>
-      <nav class="social-nav">
-        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <span class="icon-placeholder">🎵</span>
-        </a>
-        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <span class="icon-placeholder">📘</span>
-        </a>
-        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <span class="icon-placeholder">📷</span>
-        </a>
-      </nav>
+  <!-- ===== ENCABEZADO PRINCIPAL (OCUPA TODO EL ANCHO) ===== -->
+  <header class="header-full">
+    <div class="header-container">
+      <h1 class="main-title">🎫 Rifa BTS VIP</h1>
+      <div class="social-links">
+        <a href="#" class="social-btn" target="_blank">🎵 TikTok</a>
+        <a href="#" class="social-btn" target="_blank">📘 Facebook</a>
+        <a href="#" class="social-btn" target="_blank">📷 Instagram</a>
+      </div>
     </div>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL: 2 COLUMNAS ===== -->
-  <main class="main two-columns">
-    <!-- COLUMNA IZQUIERDA: NÚMEROS -->
-    <section class="left-panel">
-
-      <!-- Contador -->
-      <div class="counter-card">
-        <span class="counter-label">🎟️ Vendidos:</span>
-        <span class="counter-value" id="contadorVendidos">0 / 999</span>
-      </div>
-
-      <!-- Leyenda -->
-      <div class="legend inline-legend">
-        <div class="legend-item">
-          <div class="legend-circle legend-circle--sold small">001</div>
-          <span>Comprado</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-circle legend-circle--available small">001</div>
-          <span>Disponible</span>
-        </div>
-      </div>
-
-      <!-- Buscador -->
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="🔍 Buscar número (ej: 005, 123)" maxlength="3">
-        <button id="clearSearch" class="clear-btn">✖</button>
-      </div>
-
-      <!-- Grid de números -->
-      <div class="grid-wrapper">
-        <div class="grid-container" id="numerosGrid"></div>
-      </div>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <h2 class="hero-title">RIFA BTS VIP 🔥</h2>
+      <p class="hero-subtitle">🎤 Entrada VIP · Sábado 3 de Octubre</p>
+      <p class="hero-price">💵 $15.000 por número</p>
+      <button class="btn-primary" id="btnComprarGeneral">Comprar Ahora</button>
     </section>
 
-    <!-- COLUMNA DERECHA: DESCRIPCIÓN DEL PREMIO -->
-    <section class="right-panel">
-      <div class="premio-card">
-        <h2 class="premio-title">🎁 PREMIO VIP</h2>
-        <div class="premio-content">
-          <div class="premio-item">
-            <span class="premio-emoji">🎟️</span>
-            <p><strong>1 Entrada VIP</strong><br>Concierto BTS · Sábado 3 de Octubre</p>
+    <!-- CONTADOR Y LEYENDA -->
+    <div class="info-bar">
+      <div class="counter-box">
+        <span class="counter-label">🎟️ Números vendidos:</span>
+        <span class="counter-number" id="contadorVendidos">0 / 999</span>
+      </div>
+      <div class="legend-box">
+        <div class="legend-dot sold"></div>
+        <span>Vendido</span>
+        <div class="legend-dot available"></div>
+        <span>Disponible</span>
+      </div>
+    </div>
+
+    <!-- DOS COLUMNAS: NÚMEROS (IZQ) + PREMIO (DER) -->
+    <div class="two-column-layout">
+      <!-- COLUMNA IZQUIERDA: PANEL DE NÚMEROS -->
+      <div class="numbers-panel">
+        <div class="panel-header">
+          <h3>🔢 Elige tu número</h3>
+          <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Buscar número..." maxlength="3">
+            <button id="clearSearch" class="search-clear">✖</button>
           </div>
-          <div class="premio-item">
-            <span class="premio-emoji">💣</span>
-            <p><strong>Army Bomb Oficial</strong><br>Light stick versión especial</p>
+        </div>
+        <div class="grid-scroll">
+          <div class="numbers-grid" id="numerosGrid"></div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA: PREMIO Y DETALLES -->
+      <div class="prize-panel">
+        <div class="prize-card">
+          <h3 class="prize-title">🎁 EL PREMIO INCLUYE</h3>
+          <ul class="prize-list">
+            <li><span class="prize-icon">🎟️</span> 1 Entrada VIP · Sábado 3 de Octubre</li>
+            <li><span class="prize-icon">💣</span> Army Bomb Oficial</li>
+            <li><span class="prize-icon">👕</span> Merchandising Exclusivo BTS</li>
+          </ul>
+          <div class="prize-value">
+            <p>Valor del número: <strong>$15.000 COP</strong></p>
           </div>
-          <div class="premio-item">
-            <span class="premio-emoji">👕</span>
-            <p><strong>Merchandising Exclusivo</strong><br>Camiseta u otros artículos BTS</p>
+          <div class="ticketmaster-warning">
+            <p><strong>⚠️ IMPORTANTE:</strong> Por políticas de Ticketmaster, la entrada VIP solo se puede transferir <strong>1 mes antes del evento</strong>.</p>
           </div>
+          <p class="prize-guarantee">✅ Pago 100% seguro · Sorteo transparente</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TÉRMINOS Y CONDICIONES (ANCHO COMPLETO) -->
+    <section class="terms-section">
+      <h2 class="terms-main-title">📜 TÉRMINOS Y CONDICIONES</h2>
+      <div class="terms-grid">
+        <div class="terms-block">
+          <h4>1. ORGANIZADOR</h4>
+          <p>Persona natural responsable que garantiza transparencia y entrega del premio.</p>
           
-          <div class="premio-nota">
-            <p class="premio-precio">💰 <strong>Valor del número:</strong> $15.000 COP</p>
-          </div>
-
-          <div class="ticketmaster-nota">
-            <h3>📌 INFORMACIÓN IMPORTANTE</h3>
-            <p>Por políticas de <strong>Ticketmaster</strong>, la entrada VIP solo podrá ser transferida oficialmente aproximadamente <strong>1 mes antes del evento</strong>.</p>
-            <p>El ganador será notificado oportunamente para coordinar la transferencia de forma segura.</p>
-          </div>
-
-          <p class="premio-garantia">✅ Pago seguro · Sorteo 100% transparente</p>
+          <h4>2. DESCRIPCIÓN DEL PREMIO</h4>
+          <p>🎟️ 1 Entrada VIP · 💣 Army Bomb · 👕 Merchandising BTS. No canjeable por dinero.</p>
+          
+          <h4>3. MECÁNICA</h4>
+          <p>999 números (001-999). $15.000 c/u. Asignación solo con pago confirmado.</p>
+          
+          <h4>4. MÉTODO DE PAGO</h4>
+          <p>Nequi, Nu, Daviplata u otros. Enviar comprobante obligatorio.</p>
+          
+          <h4>5. SORTEO</h4>
+          <p>Septiembre 2026. Si se venden todos, se adelanta. Base: Lotería de Medellín.</p>
+        </div>
+        <div class="terms-block">
+          <h4>6. ENTREGA DEL PREMIO</h4>
+          <p>Contacto al ganador. Transferencia de entrada 1 mes antes del evento.</p>
+          
+          <h4>7. TRANSPARENCIA</h4>
+          <p>Publicación constante de vendidos. Transmisiones en vivo por TikTok.</p>
+          
+          <h4>8. NO COMPLETAR CUPOS</h4>
+          <p>Devolución del 90%. 10% para gastos operativos.</p>
+          
+          <h4>9. RESPONSABILIDAD</h4>
+          <p>Verificar número, dar datos válidos, guardar comprobante.</p>
+          
+          <h4>10. ACEPTACIÓN</h4>
+          <p>Participar implica aceptar todos los términos.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== SECCIÓN TÉRMINOS Y CONDICIONES (ANCHO COMPLETO) ===== -->
-  <section class="terms-section">
-    <div class="terms-container">
-      <h2 class="terms-title">📜 TÉRMINOS Y CONDICIONES – RIFA BTS VIP</h2>
-      <div class="terms-content">
-        <div class="terms-column">
-          <h3>1. ORGANIZADOR</h3>
-          <p>La presente rifa es organizada por una persona natural responsable, quien garantiza la transparencia del proceso, la veracidad del premio y la correcta entrega al ganador.</p>
-
-          <h3>2. DESCRIPCIÓN DEL PREMIO</h3>
-          <p>El premio consiste en:</p>
-          <ul>
-            <li>🎟️ 1 Entrada VIP para concierto de BTS (sábado 3 de octubre)</li>
-            <li>💣 Army Bomb</li>
-            <li>👕 Artículo(s) de merchandising BTS (camiseta u otros)</li>
-          </ul>
-          <p><strong>IMPORTANTE:</strong> El premio es único y no es canjeable por dinero en efectivo ni por otros productos.</p>
-
-          <h3>3. MECÁNICA DE PARTICIPACIÓN</h3>
-          <p>Se disponen <strong>999 números</strong> (del 001 al 999). Cada número tiene un valor de <strong>$15.000 COP</strong>. La asignación del número se realiza únicamente una vez confirmado el pago. No se reservan números sin pago previo.</p>
-
-          <h3>4. MÉTODO DE PAGO</h3>
-          <p>El participante deberá realizar el pago a través de los medios indicados por el organizador (Nequi, Nu, Daviplata u otro). Es obligatorio enviar comprobante de pago para validar la participación.</p>
-
-          <h3>5. SORTEO</h3>
-          <p>El sorteo se realizará en el mes de <strong>septiembre de 2026</strong>. En caso de venderse todos los números antes de la fecha prevista, el sorteo se realizará de manera anticipada. El número ganador será definido con base en los resultados de la <strong>Lotería de Medellín</strong> (o la que se indique oficialmente).</p>
-        </div>
-
-        <div class="terms-column">
-          <h3>6. ENTREGA DEL PREMIO</h3>
-          <p>El ganador será contactado mediante los datos proporcionados al momento de la compra. La entrega del premio será coordinada de forma segura (presencial o envío). La entrada VIP será transferida oficialmente cuando la plataforma lo permita (aproximadamente 1 mes antes del evento).</p>
-
-          <h3>7. TRANSPARENCIA</h3>
-          <p>El organizador publicará constantemente el estado de los números (vendidos/disponibles). Se realizarán <strong>transmisiones en vivo a través de TikTok</strong>, mostrando el avance de la rifa y la cantidad de números vendidos. El número ganador corresponderá estrictamente al resultado oficial de la lotería definida.</p>
-
-          <h3>8. CONDICIÓN EN CASO DE NO COMPLETAR LOS CUPOS</h3>
-          <p>En caso de no vender la cantidad mínima de números necesaria, se procederá a la devolución del <strong>90% del valor pagado</strong> a cada participante. El 10% restante corresponde a gastos operativos y administrativos.</p>
-
-          <h3>9. RESPONSABILIDAD DEL PARTICIPANTE</h3>
-          <p>Verificar que el número asignado sea correcto, proporcionar datos de contacto válidos y conservar comprobante de pago.</p>
-
-          <h3>10. ACEPTACIÓN</h3>
-          <p>La participación en esta rifa implica la aceptación total de los presentes términos y condiciones.</p>
-
-          <h3>11. CONSIDERACIONES FINALES</h3>
-          <p>Esta actividad es de carácter promocional y voluntaria. El organizador se compromete a actuar de buena fe y cumplir con lo ofrecido.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
-  <a href="#" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <span class="wa-icon">💬</span>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="#" class="whatsapp-float" id="whatsappFloat" target="_blank">
+    <span>💬</span>
   </a>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 · Rifa BTS VIP · Todos los derechos reservados</p>
   </footer>
 
-  <!-- Datos de números -->
+  <!-- DATOS Y LÓGICA -->
   <script src="numbers.js"></script>
-
-  <!-- Lógica de interacción -->
   <script>
     (function() {
-      'use strict';
-
-      const gridContainer = document.getElementById('numerosGrid');
-      const contadorSpan = document.getElementById('contadorVendidos');
+      const grid = document.getElementById('numerosGrid');
+      const contador = document.getElementById('contadorVendidos');
       const btnComprar = document.getElementById('btnComprarGeneral');
       const searchInput = document.getElementById('searchInput');
       const clearBtn = document.getElementById('clearSearch');
-      const whatsappFloat = document.getElementById('whatsappFloat');
+      const waFloat = document.getElementById('whatsappFloat');
 
-      if (!window.numbers || !Array.isArray(window.numbers)) {
-        gridContainer.innerHTML = '<p style="color:red; text-align:center;">Error al cargar números.</p>';
+      if (!window.numbers) {
+        grid.innerHTML = '<p style="color:red;">Error: numbers.js no cargado</p>';
         return;
       }
 
-      const listaNumeros = window.numbers;
+      const lista = window.numbers;
 
-      function actualizarContador() {
-        const vendidos = listaNumeros.filter(n => n.vendido).length;
-        contadorSpan.textContent = `${vendidos} / 999`;
+      function updateCounter() {
+        const vendidos = lista.filter(n => n.vendido).length;
+        contador.textContent = `${vendidos} / 999`;
       }
 
-      function abrirWhatsApp(mensaje) {
-        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
-        window.open(url, '_blank', 'noopener,noreferrer');
+      function openWA(msg) {
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
       }
 
-      function manejarClickNumero(e) {
-        const circle = e.currentTarget;
-        const numero = circle.getAttribute('data-numero');
-        const vendido = circle.getAttribute('data-vendido') === 'true';
-        if (!vendido) {
-          abrirWhatsApp(`Quiero el número ${numero}`);
-        }
-      }
-
-      function renderizarGrid(filtro = '') {
-        gridContainer.innerHTML = '';
-        const fragment = document.createDocumentFragment();
-        
-        listaNumeros.forEach(item => {
-          const { numero, vendido } = item;
-          if (filtro && !numero.includes(filtro)) return;
-
-          const circle = document.createElement('div');
-          circle.className = `numero-circle ${vendido ? 'sold' : 'available'}`;
-          circle.textContent = numero;
-          circle.setAttribute('data-numero', numero);
-          circle.setAttribute('data-vendido', vendido);
-          circle.addEventListener('click', manejarClickNumero);
-          
-          fragment.appendChild(circle);
+      function renderGrid(filtro = '') {
+        grid.innerHTML = '';
+        lista.forEach(item => {
+          if (filtro && !item.numero.includes(filtro)) return;
+          const div = document.createElement('div');
+          div.className = `number-circle ${item.vendido ? 'sold' : 'available'}`;
+          div.textContent = item.numero;
+          div.dataset.numero = item.numero;
+          div.dataset.vendido = item.vendido;
+          div.addEventListener('click', function() {
+            if (!item.vendido) openWA(`Quiero el número ${item.numero}`);
+          });
+          grid.appendChild(div);
         });
-
-        gridContainer.appendChild(fragment);
-        actualizarContador();
+        updateCounter();
       }
 
-      renderizarGrid();
-
-      searchInput.addEventListener('input', (e) => {
-        renderizarGrid(e.target.value.trim());
-      });
-
-      clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        renderizarGrid('');
-      });
-
-      btnComprar.addEventListener('click', () => {
-        abrirWhatsApp('Hola, quiero comprar un número para la Rifa BTS VIP.');
-      });
-
-      whatsappFloat.addEventListener('click', (e) => {
-        e.preventDefault();
-        abrirWhatsApp('Hola, tengo una consulta sobre la Rifa BTS VIP.');
-      });
+      renderGrid();
+      searchInput.addEventListener('input', e => renderGrid(e.target.value.trim()));
+      clearBtn.addEventListener('click', () => { searchInput.value = ''; renderGrid(); });
+      btnComprar.addEventListener('click', () => openWA('Hola, quiero comprar un número para la Rifa BTS VIP.'));
+      waFloat.addEventListener('click', e => { e.preventDefault(); openWA('Hola, tengo una consulta sobre la Rifa BTS VIP.'); });
     })();
   </script>
 </body>
