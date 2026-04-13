@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ===== ENCABEZADO ===== -->
+  <!-- ===== ENCABEZADO CENTRADO ===== -->
   <header class="header">
-    <div class="header-container">
-      <!-- Título centrado (se fuerza con flex) -->
+    <div class="header-content">
       <h1 class="logo">🎫 Rifa BTS VIP</h1>
       <nav class="social-nav">
         <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
@@ -26,9 +25,9 @@
     </div>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL (2 columnas) ===== -->
+  <!-- ===== CONTENIDO PRINCIPAL: 2 COLUMNAS ===== -->
   <main class="main two-columns">
-    <!-- COLUMNA IZQUIERDA: Panel de números -->
+    <!-- COLUMNA IZQUIERDA: NÚMEROS -->
     <section class="left-panel">
       <!-- Hero compacto -->
       <div class="hero-compact">
@@ -44,7 +43,7 @@
         <span class="counter-value" id="contadorVendidos">0 / 999</span>
       </div>
 
-      <!-- Leyenda visual -->
+      <!-- Leyenda -->
       <div class="legend inline-legend">
         <div class="legend-item">
           <div class="legend-circle legend-circle--sold small">001</div>
@@ -62,74 +61,93 @@
         <button id="clearSearch" class="clear-btn">✖</button>
       </div>
 
-      <!-- Grid de números con scroll -->
+      <!-- Grid de números -->
       <div class="grid-wrapper">
         <div class="grid-container" id="numerosGrid"></div>
       </div>
     </section>
 
-    <!-- COLUMNA DERECHA: Detalles del premio / VIP -->
+    <!-- COLUMNA DERECHA: DESCRIPCIÓN DEL PREMIO -->
     <section class="right-panel">
       <div class="premio-card">
         <h2 class="premio-title">🎁 PREMIO VIP</h2>
         <div class="premio-content">
-          <p><strong>🎟️ 1 Entrada VIP</strong> para concierto de BTS<br>📅 Sábado 3 de Octubre</p>
-          <p><strong>💣 Army Bomb</strong> oficial</p>
-          <p><strong>👕 Merchandising exclusivo</strong> (camiseta u otros)</p>
-          <div class="premio-nota">
-            <p>⭐ <strong>Valor del número:</strong> $15.000 COP</p>
-            <p>🔒 <strong>Transferencia de entrada:</strong> Por políticas de Ticketmaster, la entrada VIP solo podrá ser transferida oficialmente aproximadamente <strong>1 mes antes del evento</strong>. El ganador será notificado oportunamente.</p>
+          <div class="premio-item">
+            <span class="premio-emoji">🎟️</span>
+            <p><strong>1 Entrada VIP</strong><br>Concierto BTS · Sábado 3 de Octubre</p>
           </div>
-          <p class="premio-garantia">✅ Pago seguro · Sorteo transparente</p>
+          <div class="premio-item">
+            <span class="premio-emoji">💣</span>
+            <p><strong>Army Bomb Oficial</strong><br>Light stick versión especial</p>
+          </div>
+          <div class="premio-item">
+            <span class="premio-emoji">👕</span>
+            <p><strong>Merchandising Exclusivo</strong><br>Camiseta u otros artículos BTS</p>
+          </div>
+          
+          <div class="premio-nota">
+            <p class="premio-precio">💰 <strong>Valor del número:</strong> $15.000 COP</p>
+          </div>
+
+          <div class="ticketmaster-nota">
+            <h3>📌 INFORMACIÓN IMPORTANTE</h3>
+            <p>Por políticas de <strong>Ticketmaster</strong>, la entrada VIP solo podrá ser transferida oficialmente aproximadamente <strong>1 mes antes del evento</strong>.</p>
+            <p>El ganador será notificado oportunamente para coordinar la transferencia de forma segura.</p>
+          </div>
+
+          <p class="premio-garantia">✅ Pago seguro · Sorteo 100% transparente</p>
         </div>
       </div>
-      <!-- Puedes agregar más detalles si quieres -->
     </section>
   </main>
 
-  <!-- ===== SECCIÓN TÉRMINOS Y CONDICIONES (ancho completo) ===== -->
+  <!-- ===== SECCIÓN TÉRMINOS Y CONDICIONES (ANCHO COMPLETO) ===== -->
   <section class="terms-section">
     <div class="terms-container">
       <h2 class="terms-title">📜 TÉRMINOS Y CONDICIONES – RIFA BTS VIP</h2>
       <div class="terms-content">
-        <h3>1. ORGANIZADOR</h3>
-        <p>La presente rifa es organizada por una persona natural responsable, quien garantiza la transparencia del proceso, la veracidad del premio y la correcta entrega al ganador.</p>
+        <div class="terms-column">
+          <h3>1. ORGANIZADOR</h3>
+          <p>La presente rifa es organizada por una persona natural responsable, quien garantiza la transparencia del proceso, la veracidad del premio y la correcta entrega al ganador.</p>
 
-        <h3>2. DESCRIPCIÓN DEL PREMIO</h3>
-        <p>El premio consiste en:</p>
-        <ul>
-          <li>🎟️ 1 Entrada VIP para concierto de BTS (sábado 3 de octubre)</li>
-          <li>💣 Army Bomb</li>
-          <li>👕 Artículo(s) de merchandising BTS (camiseta u otros)</li>
-        </ul>
-        <p><strong>IMPORTANTE:</strong> El premio es único y no es canjeable por dinero en efectivo ni por otros productos.</p>
+          <h3>2. DESCRIPCIÓN DEL PREMIO</h3>
+          <p>El premio consiste en:</p>
+          <ul>
+            <li>🎟️ 1 Entrada VIP para concierto de BTS (sábado 3 de octubre)</li>
+            <li>💣 Army Bomb</li>
+            <li>👕 Artículo(s) de merchandising BTS (camiseta u otros)</li>
+          </ul>
+          <p><strong>IMPORTANTE:</strong> El premio es único y no es canjeable por dinero en efectivo ni por otros productos.</p>
 
-        <h3>3. MECÁNICA DE PARTICIPACIÓN</h3>
-        <p>Se disponen <strong>999 números</strong> (del 001 al 999). Cada número tiene un valor de <strong>$15.000 COP</strong>. La asignación del número se realiza únicamente una vez confirmado el pago. No se reservan números sin pago previo.</p>
+          <h3>3. MECÁNICA DE PARTICIPACIÓN</h3>
+          <p>Se disponen <strong>999 números</strong> (del 001 al 999). Cada número tiene un valor de <strong>$15.000 COP</strong>. La asignación del número se realiza únicamente una vez confirmado el pago. No se reservan números sin pago previo.</p>
 
-        <h3>4. MÉTODO DE PAGO</h3>
-        <p>El participante deberá realizar el pago a través de los medios indicados por el organizador (Nequi, Nu, Daviplata u otro). Es obligatorio enviar comprobante de pago para validar la participación.</p>
+          <h3>4. MÉTODO DE PAGO</h3>
+          <p>El participante deberá realizar el pago a través de los medios indicados por el organizador (Nequi, Nu, Daviplata u otro). Es obligatorio enviar comprobante de pago para validar la participación.</p>
 
-        <h3>5. SORTEO</h3>
-        <p>El sorteo se realizará en el mes de <strong>septiembre de 2026</strong>. En caso de venderse todos los números antes de la fecha prevista, el sorteo se realizará de manera anticipada. El número ganador será definido con base en los resultados de la <strong>Lotería de Medellín</strong> (o la que se indique oficialmente).</p>
+          <h3>5. SORTEO</h3>
+          <p>El sorteo se realizará en el mes de <strong>septiembre de 2026</strong>. En caso de venderse todos los números antes de la fecha prevista, el sorteo se realizará de manera anticipada. El número ganador será definido con base en los resultados de la <strong>Lotería de Medellín</strong> (o la que se indique oficialmente).</p>
+        </div>
 
-        <h3>6. ENTREGA DEL PREMIO</h3>
-        <p>El ganador será contactado mediante los datos proporcionados al momento de la compra. La entrega del premio será coordinada de forma segura (presencial o envío). La entrada VIP será transferida oficialmente cuando la plataforma lo permita (aproximadamente 1 mes antes del evento).</p>
+        <div class="terms-column">
+          <h3>6. ENTREGA DEL PREMIO</h3>
+          <p>El ganador será contactado mediante los datos proporcionados al momento de la compra. La entrega del premio será coordinada de forma segura (presencial o envío). La entrada VIP será transferida oficialmente cuando la plataforma lo permita (aproximadamente 1 mes antes del evento).</p>
 
-        <h3>7. TRANSPARENCIA</h3>
-        <p>El organizador publicará constantemente el estado de los números (vendidos/disponibles). Se realizarán <strong>transmisiones en vivo a través de TikTok</strong>, mostrando el avance de la rifa y la cantidad de números vendidos. El número ganador corresponderá estrictamente al resultado oficial de la lotería definida.</p>
+          <h3>7. TRANSPARENCIA</h3>
+          <p>El organizador publicará constantemente el estado de los números (vendidos/disponibles). Se realizarán <strong>transmisiones en vivo a través de TikTok</strong>, mostrando el avance de la rifa y la cantidad de números vendidos. El número ganador corresponderá estrictamente al resultado oficial de la lotería definida.</p>
 
-        <h3>8. CONDICIÓN EN CASO DE NO COMPLETAR LOS CUPOS</h3>
-        <p>En caso de no vender la cantidad mínima de números necesaria, se procederá a la devolución del <strong>90% del valor pagado</strong> a cada participante. El 10% restante corresponde a gastos operativos y administrativos.</p>
+          <h3>8. CONDICIÓN EN CASO DE NO COMPLETAR LOS CUPOS</h3>
+          <p>En caso de no vender la cantidad mínima de números necesaria, se procederá a la devolución del <strong>90% del valor pagado</strong> a cada participante. El 10% restante corresponde a gastos operativos y administrativos.</p>
 
-        <h3>9. RESPONSABILIDAD DEL PARTICIPANTE</h3>
-        <p>Verificar que el número asignado sea correcto, proporcionar datos de contacto válidos y conservar comprobante de pago.</p>
+          <h3>9. RESPONSABILIDAD DEL PARTICIPANTE</h3>
+          <p>Verificar que el número asignado sea correcto, proporcionar datos de contacto válidos y conservar comprobante de pago.</p>
 
-        <h3>10. ACEPTACIÓN</h3>
-        <p>La participación en esta rifa implica la aceptación total de los presentes términos y condiciones.</p>
+          <h3>10. ACEPTACIÓN</h3>
+          <p>La participación en esta rifa implica la aceptación total de los presentes términos y condiciones.</p>
 
-        <h3>11. CONSIDERACIONES FINALES</h3>
-        <p>Esta actividad es de carácter promocional y voluntaria. El organizador se compromete a actuar de buena fe y cumplir con lo ofrecido.</p>
+          <h3>11. CONSIDERACIONES FINALES</h3>
+          <p>Esta actividad es de carácter promocional y voluntaria. El organizador se compromete a actuar de buena fe y cumplir con lo ofrecido.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -160,7 +178,7 @@
       const whatsappFloat = document.getElementById('whatsappFloat');
 
       if (!window.numbers || !Array.isArray(window.numbers)) {
-        gridContainer.innerHTML = '<p style="color:red;">Error al cargar números.</p>';
+        gridContainer.innerHTML = '<p style="color:red; text-align:center;">Error al cargar números.</p>';
         return;
       }
 
