@@ -15,93 +15,84 @@ body {
   flex-direction: column;
 }
 
-/* ===== ENCABEZADO ===== */
+/* ===== ENCABEZADO CENTRADO ===== */
 .header {
   background: #0d1424;
   border-bottom: 2px solid #2e3a5c;
-  padding: 0.9rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.header-container {
+.header-content {
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
   color: #ffd966;
-  text-shadow: 0 0 10px #ffb34780;
-  margin: 0 auto 0 0; /* alineado a la izquierda en desktop, pero centrado? mejor centrarlo con flex */
-  flex: 1;
+  text-shadow: 0 0 15px #ffb34780;
   text-align: center;
-}
-
-/* Para que el logo quede centrado incluso con los íconos a la derecha */
-.header-container {
-  position: relative;
-}
-.social-nav {
-  margin-left: auto;
+  letter-spacing: 2px;
 }
 
 .social-nav {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  justify-content: center;
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #1e2b47;
   color: white;
   text-decoration: none;
-  font-size: 1.8rem;
-  transition: transform 0.2s, background 0.2s;
+  font-size: 2rem;
+  transition: all 0.2s ease;
   border: 1px solid #3e5775;
 }
 
 .social-icon:hover {
   background: #2e4a6a;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 /* ===== MAIN 2 COLUMNAS ===== */
 .main.two-columns {
   display: flex;
   max-width: 1600px;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 0 20px;
-  gap: 25px;
+  gap: 30px;
   flex: 1;
   width: 100%;
 }
 
 .left-panel {
-  flex: 1.4;
+  flex: 1.3;
   min-width: 0;
 }
 
 .right-panel {
   flex: 0.9;
-  min-width: 280px;
+  min-width: 300px;
 }
 
 /* ===== HERO COMPACTO ===== */
 .hero-compact {
   background: linear-gradient(145deg, #101a2b, #0a101e);
   border-radius: 30px;
-  padding: 20px 20px;
+  padding: 25px 20px;
   margin-bottom: 20px;
   border: 1px solid #2c405e;
   text-align: center;
@@ -114,15 +105,15 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 10px 0 5px;
 }
 
 .hero-price {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #b7e4c7;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .btn-buy {
@@ -130,8 +121,8 @@ body {
   border: none;
   color: #0a1a1c;
   font-weight: 800;
-  font-size: 1.3rem;
-  padding: 12px 30px;
+  font-size: 1.4rem;
+  padding: 14px 40px;
   border-radius: 60px;
   cursor: pointer;
   box-shadow: 0 5px 0 #1b7943, 0 6px 15px rgba(46, 204, 113, 0.3);
@@ -148,7 +139,7 @@ body {
 /* Contador */
 .counter-card {
   background: #111b2b;
-  padding: 12px 20px;
+  padding: 12px 25px;
   border-radius: 40px;
   display: inline-block;
   margin-bottom: 15px;
@@ -156,20 +147,20 @@ body {
 }
 
 .counter-label {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-right: 10px;
 }
 
 .counter-value {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 800;
   background: #1f2e44;
-  padding: 4px 20px;
+  padding: 5px 25px;
   border-radius: 40px;
   color: #ffde9e;
 }
 
-/* Leyenda inline */
+/* Leyenda */
 .inline-legend {
   display: flex;
   gap: 30px;
@@ -179,13 +170,13 @@ body {
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .legend-circle.small {
-  width: 40px;
-  height: 40px;
-  font-size: 1rem;
+  width: 45px;
+  height: 45px;
+  font-size: 1.1rem;
   box-shadow: 0 3px 0 #1a1a2e;
   display: flex;
   align-items: center;
@@ -216,7 +207,7 @@ body {
   flex: 1;
   background: transparent;
   border: none;
-  padding: 12px 18px;
+  padding: 14px 20px;
   font-size: 1.1rem;
   color: white;
   outline: none;
@@ -230,14 +221,14 @@ body {
   background: none;
   border: none;
   color: #c0d4f0;
-  font-size: 1.3rem;
-  padding: 0 15px;
+  font-size: 1.5rem;
+  padding: 0 18px;
   cursor: pointer;
 }
 
 /* Grid wrapper */
 .grid-wrapper {
-  max-height: 480px;
+  max-height: 500px;
   overflow-y: auto;
   padding-right: 5px;
   border-radius: 20px;
@@ -256,7 +247,7 @@ body {
 .numero-circle {
   aspect-ratio: 1/1;
   width: 100%;
-  max-width: 55px;
+  max-width: 58px;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;
@@ -275,7 +266,7 @@ body {
   background: linear-gradient(145deg, #2ecc71, #1f8f4b);
 }
 .numero-circle.available:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
   background: #3fe081;
 }
 .numero-circle.sold {
@@ -290,21 +281,40 @@ body {
   background: #0e1625;
   border-radius: 24px;
   border: 1px solid #2c405e;
-  padding: 25px 20px;
+  padding: 25px 22px;
   box-shadow: 0 10px 25px #00000060;
+  position: sticky;
+  top: 20px;
 }
 
 .premio-title {
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: #ffd966;
   border-bottom: 2px solid #3e5775;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-.premio-content p {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
+.premio-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #111b2b;
+  border-radius: 15px;
+}
+
+.premio-emoji {
+  font-size: 2.5rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.premio-item p {
+  margin: 0;
+  font-size: 1.05rem;
 }
 
 .premio-nota {
@@ -312,15 +322,34 @@ body {
   border-radius: 16px;
   padding: 15px;
   margin: 20px 0;
-  border-left: 5px solid #f1c40f;
+  text-align: center;
+}
+
+.premio-precio {
+  font-size: 1.3rem;
+}
+
+.ticketmaster-nota {
+  background: #1a1f2e;
+  border-left: 5px solid #e74c3c;
+  padding: 18px 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.ticketmaster-nota h3 {
+  color: #ffd966;
+  margin-bottom: 10px;
 }
 
 .premio-garantia {
   color: #a3e0b0;
   font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
 }
 
-/* ===== TÉRMINOS Y CONDICIONES (ancho completo) ===== */
+/* ===== TÉRMINOS Y CONDICIONES ===== */
 .terms-section {
   max-width: 1600px;
   margin: 30px auto 0;
@@ -332,36 +361,38 @@ body {
   background: #0e1625;
   border-radius: 30px;
   border: 1px solid #2c405e;
-  padding: 30px 30px;
+  padding: 35px 35px;
   box-shadow: 0 10px 25px #00000060;
 }
 
 .terms-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #ffd966;
-  border-bottom: 2px solid #3e5775;
-  padding-bottom: 15px;
-  margin-bottom: 25px;
+  border-bottom: 3px solid #3e5775;
+  padding-bottom: 18px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .terms-content {
-  color: #e0ecff;
-  column-count: 2;
-  column-gap: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.terms-column {
+  flex: 1;
 }
 
 .terms-content h3 {
   margin-top: 20px;
   margin-bottom: 8px;
   color: #bdd3ff;
-  font-size: 1.3rem;
-  break-after: avoid;
+  font-size: 1.2rem;
 }
 
 .terms-content p, .terms-content ul {
   margin-bottom: 15px;
-  break-inside: avoid;
+  color: #d0dff5;
 }
 
 .terms-content ul {
@@ -396,17 +427,18 @@ body {
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #0a101a;
   border-top: 1px solid #253c58;
   color: #9bb5d4;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1000px) {
   .terms-content {
-    column-count: 1;
+    flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -414,27 +446,24 @@ body {
   .main.two-columns {
     flex-direction: column;
   }
-  .logo {
-    text-align: center;
-    flex: auto;
-  }
-  .header-container {
-    justify-content: center;
+  .premio-card {
+    position: static;
   }
 }
 
 @media (max-width: 600px) {
+  .logo {
+    font-size: 2rem;
+  }
   .grid-container {
-    gap: 4px;
+    gap: 5px;
   }
   .numero-circle {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .whatsapp-float {
     width: 55px;
     height: 55px;
     font-size: 2rem;
-    bottom: 20px;
-    right: 20px;
   }
 }
