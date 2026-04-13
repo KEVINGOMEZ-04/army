@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ===== ENCABEZADO PRINCIPAL (OCUPA TODO EL ANCHO) ===== -->
+  <!-- ===== ENCABEZADO PRINCIPAL ===== -->
   <header class="header-full">
     <div class="header-container">
       <h1 class="main-title">🎫 Rifa BTS VIP</h1>
@@ -36,16 +36,20 @@
         <span class="counter-number" id="contadorVendidos">0 / 999</span>
       </div>
       <div class="legend-box">
-        <div class="legend-dot sold"></div>
-        <span>Vendido</span>
-        <div class="legend-dot available"></div>
-        <span>Disponible</span>
+        <div class="legend-item">
+          <div class="legend-dot sold"></div>
+          <span>Vendido</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot available"></div>
+          <span>Disponible</span>
+        </div>
       </div>
     </div>
 
-    <!-- DOS COLUMNAS: NÚMEROS (IZQ) + PREMIO (DER) -->
+    <!-- DOS COLUMNAS -->
     <div class="two-column-layout">
-      <!-- COLUMNA IZQUIERDA: PANEL DE NÚMEROS -->
+      <!-- COLUMNA IZQUIERDA: NÚMEROS -->
       <div class="numbers-panel">
         <div class="panel-header">
           <h3>🔢 Elige tu número</h3>
@@ -59,7 +63,7 @@
         </div>
       </div>
 
-      <!-- COLUMNA DERECHA: PREMIO Y DETALLES -->
+      <!-- COLUMNA DERECHA: PREMIO -->
       <div class="prize-panel">
         <div class="prize-card">
           <h3 class="prize-title">🎁 EL PREMIO INCLUYE</h3>
@@ -79,7 +83,7 @@
       </div>
     </div>
 
-    <!-- TÉRMINOS Y CONDICIONES (ANCHO COMPLETO) -->
+    <!-- TÉRMINOS Y CONDICIONES -->
     <section class="terms-section">
       <h2 class="terms-main-title">📜 TÉRMINOS Y CONDICIONES</h2>
       <div class="terms-grid">
